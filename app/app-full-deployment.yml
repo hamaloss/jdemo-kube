@@ -97,7 +97,7 @@ spec:
               done
       containers:
         - name: app-app
-          image: harbor.teco.1-4.fi.teco.online/jdemo/app:0.0.1
+          image: "harbor.teco.1-4.fi.teco.online/jdemo/app:${build.properties['TAG']}"
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod
